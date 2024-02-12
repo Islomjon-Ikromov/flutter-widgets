@@ -314,3 +314,68 @@ class _CustomBottomNavigationBar4State
     );
   }
 }
+// ============================== CustomBottomNavigationBar5 ==============================
+
+// bottomNavigationBar: const CustomBottomNavigationBar5(),
+// floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+// floatingActionButton: FloatingActionButton(
+//   backgroundColor: Colors.white,
+//   // mini: true,
+//   shape: const CircleBorder(),
+//   onPressed: () {},
+//   child: const Icon(Icons.add),
+// ),
+
+class CustomBottomNavigationBar5 extends StatelessWidget {
+  const CustomBottomNavigationBar5({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      height: 60,
+      color: Colors.cyan.shade400,
+      notchMargin: 5,
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          IconButton(
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.white,
+              size: 30,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.search,
+              color: Colors.black38,
+              size: 30,
+            ),
+            onPressed: () {},
+          ),
+          const SizedBox(width: 10),
+          IconButton(
+            icon: const Icon(
+              Icons.print,
+              color: Colors.black38,
+              size: 30,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.people,
+              color: Colors.black38,
+              size: 30,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
+  }
+}
