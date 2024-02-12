@@ -3,14 +3,20 @@ import 'package:flutter/material.dart';
 // wrap with CustomScrollView in slivers
 
 // after appbar put
-// SliverList(
-//             delegate: SliverChildBuilderDelegate(
-//               (BuildContext context, int index) {
-//                 return Text("$index");
-//               },
-//               childCount: 20,
-//             ),
-//           ),
+
+// SliverToBoxAdapter(
+//   child: Container(
+//     margin: const EdgeInsets.all(20),
+//     decoration: const BoxDecoration(
+//       color: Colors.blue,
+//       borderRadius: BorderRadius.all(
+//         Radius.circular(30),
+//       ),
+//     ),
+//     height: 400,
+//   ),
+// ),
+
 class MySliverAppBar extends StatelessWidget {
   const MySliverAppBar({super.key});
 
