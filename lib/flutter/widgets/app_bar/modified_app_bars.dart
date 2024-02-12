@@ -153,14 +153,31 @@ class MyAppBar3 extends AppBar {
         );
 }
 
-class MyAppBar4 extends StatelessWidget implements PreferredSizeWidget {
+class MyAppBar4 extends AppBar {
+  final Widget title;
+  final List<Widget>? actions;
+
+  MyAppBar4({
+    Key? key,
+    required this.title,
+    this.actions,
+  }) : super(
+          key: key,
+          leading: null,
+          title: title,
+          actions: actions,
+          centerTitle: false,
+        );
+}
+
+class MyAppBar5 extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor;
   final double height;
   final String title;
   final VoidCallback onDriverPressed;
   final VoidCallback onSearchPressed;
 
-  const MyAppBar4({
+  const MyAppBar5({
     Key? key,
     required this.title,
     this.backgroundColor,
