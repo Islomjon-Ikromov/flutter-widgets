@@ -86,14 +86,14 @@ class MyAppBar1 extends AppBar {
 
 class MyAppBar2 extends AppBar {
   final VoidCallback? onBackPressed;
-  final Widget? title;
+  final Widget title;
   final List<Widget>? actions;
   final BuildContext appBarContext;
 
   MyAppBar2({
     Key? key,
     this.onBackPressed,
-    this.title,
+    required this.title,
     this.actions,
     required this.appBarContext,
   }) : super(
@@ -109,6 +109,46 @@ class MyAppBar2 extends AppBar {
           ),
           title: title,
           actions: actions,
+          centerTitle: true,
+        );
+}
+
+class MyAppBar3 extends AppBar {
+  final VoidCallback onDriverPressed;
+  final VoidCallback onSearchPressed;
+
+  final String screenName;
+
+  MyAppBar3({
+    Key? key,
+    required this.screenName,
+    required this.onDriverPressed,
+    required this.onSearchPressed,
+  }) : super(
+          key: key,
+          leading: IconButton(
+            onPressed: onDriverPressed,
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.blue,
+            ),
+          ),
+          title: Text(
+            screenName,
+            style: const TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: onSearchPressed,
+              icon: const Icon(
+                Icons.search,
+                color: Colors.blue,
+              ),
+            ),
+          ],
           centerTitle: true,
         );
 }
