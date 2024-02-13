@@ -183,6 +183,19 @@ class CustomAppBar3 extends StatelessWidget implements PreferredSize {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: IconButton(
+            padding: EdgeInsets.zero,
+            alignment: Alignment.center,
+            onPressed: () {},
+            icon: const Icon(
+              Icons.notifications_active_outlined,
+              color: Colors.white,
+              size: 30,
+            ),
+          ),
+        ),
       ],
     );
   }
