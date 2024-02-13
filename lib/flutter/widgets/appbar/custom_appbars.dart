@@ -2,21 +2,27 @@ import 'package:flutter/material.dart';
 
 // ============================== MyCustomAppBar1 ==============================
 
-// appBar: MyCustomAppBar1()
+// appBar: CustomAppBar1()
 
-class MyCustomAppBar1 extends StatelessWidget implements PreferredSize {
-  const MyCustomAppBar1({super.key});
+class CustomAppBar1 extends StatelessWidget implements PreferredSize {
+  const CustomAppBar1({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext appBarContext) {
     return AppBar(
       backgroundColor: Colors.blue,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+          bottomRight: Radius.circular(10),
+        ),
+      ),
       leading: Padding(
         padding: const EdgeInsets.all(4.0),
         child: IconButton(
           padding: EdgeInsets.zero,
           onPressed: () {
-            Scaffold.of(context).openDrawer();
+            Scaffold.of(appBarContext).openDrawer();
           },
           icon: const Icon(
             Icons.menu,
@@ -61,29 +67,29 @@ class MyCustomAppBar1 extends StatelessWidget implements PreferredSize {
   Size get preferredSize => const Size.fromHeight(60);
 }
 
-// ============================== MyCustomAppBar2 ==============================
+// ============================== CustomAppBar2 ==============================
 
 // Stack(
 //   children: [
 //     Align(
 //       alignment: Alignment.topCenter,
-//       child: MyCustomAppBar2(),
+//       child: CustomAppBar2(),
 //     ),
 //   ],
 // )
 
-class MyCustomAppBar2 extends StatelessWidget {
-  const MyCustomAppBar2({super.key});
+class CustomAppBar2 extends StatelessWidget {
+  const CustomAppBar2({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext appBarContext) {
     return Container(
       height: 100,
       decoration: const BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20),
+          bottomLeft: Radius.circular(10),
+          bottomRight: Radius.circular(10),
         ),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
@@ -96,7 +102,9 @@ class MyCustomAppBar2 extends StatelessWidget {
               padding: const EdgeInsets.all(4.0),
               child: IconButton(
                 padding: EdgeInsets.zero,
-                onPressed: () {},
+                onPressed: () {
+                  Scaffold.of(appBarContext).openDrawer();
+                },
                 icon: const Icon(
                   Icons.menu,
                   color: Colors.white,

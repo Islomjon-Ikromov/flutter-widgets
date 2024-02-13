@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-// ============================== MySliverAppBar1 ==============================
+// ============================== CustomSliverAppBar1 ==============================
 
 // CustomScrollView(
 //   slivers: [
-//     const MySliverAppBar1(),
+//     const CustomSliverAppBar1(),
 //     SliverToBoxAdapter(
 //       child: Container(
 //         margin: const EdgeInsets.all(20),
@@ -32,11 +32,11 @@ import 'package:flutter/material.dart';
 //   ],
 // ),
 
-class MySliverAppBar1 extends StatelessWidget {
-  const MySliverAppBar1({super.key});
+class CustomSliverAppBar1 extends StatelessWidget {
+  const CustomSliverAppBar1({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext sliverAppBarContext) {
     return SliverAppBar(
       leading: IconButton(
         onPressed: () {},
@@ -56,7 +56,9 @@ class MySliverAppBar1 extends StatelessWidget {
       centerTitle: true,
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Scaffold.of(sliverAppBarContext).openDrawer();
+          },
           icon: const Icon(
             Icons.search,
             color: Colors.white,
@@ -108,11 +110,11 @@ class MySliverAppBar1 extends StatelessWidget {
   }
 }
 
-// ============================== MySliverAppBar2 ==============================
+// ============================== CustomSliverAppBar2 ==============================
 
 // CustomScrollView(
 //   slivers: [
-//     const MySliverAppBar2(),
+//     const CustomSliverAppBar2(),
 //     SliverToBoxAdapter(
 //       child: Container(
 //         margin: const EdgeInsets.all(20),

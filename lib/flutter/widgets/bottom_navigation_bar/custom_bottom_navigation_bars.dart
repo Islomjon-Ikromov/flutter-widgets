@@ -156,7 +156,7 @@ class CustomBottomNavigationBar3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 70,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.black54,
@@ -212,14 +212,12 @@ class CustomBottomNavigationBar3 extends StatelessWidget {
   }
 }
 
-
 // ============================== CustomBottomNavigationBar4 ==============================
 
 // bottomNavigationBar: const CustomBottomNavigationBar4(),
 // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 // floatingActionButton: FloatingActionButton(
 //   backgroundColor: Colors.white,
-//   // mini: true,
 //   shape: const CircleBorder(),
 //   onPressed: () {},
 //   child: const Icon(Icons.add),
