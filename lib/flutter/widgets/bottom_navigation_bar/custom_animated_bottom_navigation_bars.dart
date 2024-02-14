@@ -245,7 +245,7 @@ class _CustomAnimatedBottomNavigationBar3State
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           buildNavItem(1, Icons.home, Icons.home_outlined),
-          // buildNavItem(2, Icons.search, Icons.search),
+          buildNavItem(2, Icons.search, Icons.search),
           buildNavItem(3, Icons.favorite, Icons.favorite_outline),
           buildNavItem(4, Icons.settings, Icons.settings_outlined),
         ],
