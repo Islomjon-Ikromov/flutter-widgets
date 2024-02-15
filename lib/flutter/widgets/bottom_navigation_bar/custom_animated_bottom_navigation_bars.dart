@@ -122,7 +122,7 @@ class _CustomAnimatedBottomNavigationBar2State
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 80,
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       // margin: const EdgeInsets.only(bottom: 30, left: 10, right: 10),
@@ -220,6 +220,8 @@ class CustomAnimatedBottomNavigationBar3 extends StatefulWidget {
 class _CustomAnimatedBottomNavigationBar3State
     extends State<CustomAnimatedBottomNavigationBar3> {
   int currentIndex = 1;
+  Color bgColor = const Color(0xFF2196f3);
+  Color activeColor = const Color(0xFF023e8a);
 
   @override
   Widget build(BuildContext context) {
@@ -229,7 +231,7 @@ class _CustomAnimatedBottomNavigationBar3State
       padding: const EdgeInsets.symmetric(horizontal: 30),
       margin: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
       decoration: BoxDecoration(
-        color: Color(0xFF948af8),
+        color: bgColor,
         borderRadius: const BorderRadius.all(Radius.circular(30)),
         boxShadow: [
           BoxShadow(
@@ -286,8 +288,8 @@ class _CustomAnimatedBottomNavigationBar3State
             curve: Curves.fastLinearToSlowEaseIn,
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             decoration: BoxDecoration(
-              color: index == currentIndex ? Color(0xFF6054e8) : Color(0xFF948af8),
-              borderRadius: BorderRadius.all(
+              color: index == currentIndex ? activeColor : bgColor,
+              borderRadius: const BorderRadius.all(
                 Radius.circular(30),
               ),
             ),

@@ -156,7 +156,7 @@ class CustomItemCard2 extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.favorite_border,
                       color: Colors.red,
                       size: 20,
@@ -232,6 +232,86 @@ class CustomItemCard2 extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CustomItemCard3 extends StatelessWidget {
+  const CustomItemCard3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.white,
+      surfaceTintColor: Colors.white,
+      elevation: 5,
+      clipBehavior: Clip.hardEdge,
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Image.network(
+                  "https://media.baamboozle.com/uploads/images/122839/1635218463_511509.jpeg",
+                  height: 180,
+                  width: double.infinity,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: NetworkImage(
+                      "https://i.pinimg.com/originals/f6/db/eb/f6dbeb17951cb9d12c450eb26e42e484.jpg",
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Text(
+              "Yangi mahsulotlar olishga ulgurib qoling",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Text(
+              "Joriy oyning oxiriga qadar chegirmalar asosida mahsulotlarni sotib olishga ulgurib qoling aks holda vaqt tugaydi",
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 14,
+                color: Colors.black54,
+              ),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 10, bottom: 10),
+            child: Text(
+              "12.12.2030",
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12,
+                color: Colors.black26,
+              ),
+              textAlign: TextAlign.start,
+            ),
+          ),
+        ],
       ),
     );
   }
