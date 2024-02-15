@@ -265,24 +265,6 @@ class _CustomAnimatedBottomNavigationBar3State
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // AnimatedContainer(
-          //   duration: const Duration(milliseconds: 2000),
-          //   curve: Curves.fastLinearToSlowEaseIn,
-          //   margin: const EdgeInsets.only(
-          //     bottom: 10,
-          //     right: 10,
-          //     left: 10,
-          //   ),
-          //   width: 50,
-          //   height: 5,
-          //   decoration: BoxDecoration(
-          //     color: index == currentIndex ? Colors.white : Colors.white,
-          //     borderRadius: const BorderRadius.vertical(
-          //       bottom: Radius.circular(30),
-          //       top: Radius.circular(0),
-          //     ),
-          //   ),
-          // ),
           AnimatedContainer(
             duration: const Duration(milliseconds: 2000),
             curve: Curves.fastLinearToSlowEaseIn,
