@@ -65,7 +65,7 @@ class CustomTextField2 extends StatelessWidget {
         cursorColor: Colors.blue,
         maxLength: 18,
         decoration: InputDecoration(
-          // errorText: "Error",
+          errorText: "Error",
           counterText: "",
           errorStyle: const TextStyle(
             fontSize: 12,
@@ -170,6 +170,8 @@ class CustomTextField3 extends StatelessWidget {
         cursorColor: Colors.blue,
         maxLength: 18,
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.black12,
           // errorText: "Error",
           counterText: "",
           helperText: "Input your username",
