@@ -255,3 +255,108 @@ class CustomTextField3 extends StatelessWidget {
     );
   }
 }
+
+// ============================== CustomTextFormField1 ==============================
+
+// child: CustomTextFormField1()
+
+class CustomTextFormField1 extends StatelessWidget {
+  const CustomTextFormField1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        color: Colors.white,
+        surfaceTintColor: Colors.white,
+        shadowColor: Colors.blue,
+        elevation: 2,
+        child: TextFormField(
+          cursorColor: Colors.blue,
+          maxLength: 18,
+          decoration: InputDecoration(
+            // errorText: "Error",
+            // helperText: "Username",
+            hintText: "Username",
+            counterText: "",
+            errorStyle: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
+              color: Colors.red,
+              fontStyle: FontStyle.normal,
+            ),
+            contentPadding: const EdgeInsets.only(left: 10),
+            border: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.black12,
+                width: 2,
+              ),
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.black12,
+                width: 1.2,
+              ),
+            ),
+            disabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.black12,
+                width: 1.5,
+              ),
+            ),
+            focusedBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.blue,
+                width: 1.2,
+              ),
+            ),
+            errorBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.red,
+                width: 1.2,
+              ),
+            ),
+            focusedErrorBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              borderSide: BorderSide(
+                color: Colors.red,
+                width: 1.5,
+              ),
+            ),
+            prefixIcon: const Icon(
+              Icons.lock_outline,
+              color: Colors.black26,
+              size: 20,
+            ),
+            suffixIcon: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.remove_red_eye_outlined,
+                color: Colors.black26,
+                size: 20,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
